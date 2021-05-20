@@ -15,7 +15,7 @@ export function filterRepos(
   const languages = filters.languages ?? [];
   if (languages.length > 0) {
     output = input.filter((repo) =>
-      languages.includes(repo.language.toLowerCase())
+      languages.includes(repo.last.toLowerCase())
     );
   }
 
@@ -28,15 +28,15 @@ export function filterRepos(
       case SortEntityType.Name:
         return left.name.localeCompare(right.name);
       case SortEntityType.Description:
-        return left.description.localeCompare(right.description);
-      case SortEntityType.Language:
-        return left.language.localeCompare(right.language);
+        return left.status.localeCompare(right.status);
+      case SortEntityType.lname:
+        return left.last.localeCompare(right.last);
       case SortEntityType.Followers:
-        return compareNumber(left.followers, right.followers);
-      case SortEntityType.Stars:
-        return compareNumber(left.stars, right.stars);
+        return compareNumber(left.id, right.id);
+      case SortEntityType.Zip:
+        return compareNumber(left.zip, right.zip);
       case SortEntityType.Forks:
-        return compareNumber(left.forks, right.forks);
+        return left.name.localeCompare(right.state);
     }
 
     return 0;

@@ -18,19 +18,23 @@ function App() {
 
   return (
     <div className="App">
-      <div className="block">
-        <h1>Speechly React example app</h1>
+      <div   style={{height: '40px', width: '100%', padding: '11px', backgroundColor: '#fff'}}>
+      <div className="header-logo"></div>
+        {/* <h1>Speechly React example app</h1> */}
       </div>
 
-      <div className="block">
+      {/* <div className="block">
         This is an example app for filtering data using{" "}
         <a href="https://speechly.com">Speechly</a> and{" "}
         <a href="https://reactjs.org">React</a>. Check out the source code on{" "}
         <a href="https://github.com/speechly/react-example-repo-filtering">
           GitHub
         </a>
-      </div>
+      </div> */}
 
+<div className="block">
+      You can sort the table columns using the Voice button.  </div>
+{/* 
       <div className="block">
         Try filtering the repos by language by pressing the "Start" button and
         saying e.g.:
@@ -52,7 +56,7 @@ function App() {
           </li>
         </ul>
         If you want to reset the filters, just say <em>Reset the filters</em>.
-      </div>
+      </div> */}
 
       <SpeechProvider appId={appId} language={language}>
         <SpeechApp />

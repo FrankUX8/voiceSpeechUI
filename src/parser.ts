@@ -2,13 +2,15 @@ import { SpeechSegment } from "@speechly/react-client";
 
 export enum IntentType {
   Unknown = "unknown",
-  Sort = "sort",
+  Sort = "hello",
   Filter = "filter",
   Reset = "reset",
+  Fname = "first Name",
+  lname = "last Name"
 }
 
 export enum EntityType {
-  Language = "language",
+  lname = "last Name",
   SortField = "sort_field",
 }
 
@@ -16,9 +18,9 @@ export enum SortEntityType {
   Unknown = "unknown",
   Name = "name",
   Description = "description",
-  Language = "language",
+  lname = "lname",
   Followers = "followers",
-  Stars = "stars",
+  Zip = "zip",
   Forks = "forks",
 }
 
@@ -27,8 +29,11 @@ const SortTypeValues = Object.values(SortEntityType) as string[];
 
 export function parseIntent(segment: SpeechSegment): IntentType {
   const { intent } = segment;
+  console.log(segment);
+  console.log(intent);
 
   if (SpeechIntentValues.includes(intent.intent)) {
+    console.log(intent.intent);
     return intent.intent as IntentType;
   }
 
@@ -39,7 +44,7 @@ export function parseLanguageEntity(segment: SpeechSegment): string[] {
   const langs: string[] = [];
 
   for (const e of segment.entities) {
-    if (e.type === EntityType.Language) {
+    if (e.type === EntityType.lname) {
       langs.push(e.value.toLowerCase());
     }
   }

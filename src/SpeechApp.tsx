@@ -36,7 +36,7 @@ export const SpeechApp: React.FC = (): JSX.Element => {
   }, [segment]);
 
   return (
-    <div>
+    <div style={{backgroundColor: '#f9f9f9', padding: '4px'}}>
       <Microphone
         segment={segment}
         state={speechState}

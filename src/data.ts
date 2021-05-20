@@ -1,113 +1,72 @@
 export type Repository = {
   name: string;
-  description: string;
-  language: string;
-  followers: number;
-  stars: number;
-  forks: number;
+  status: string;
+  last: string;
+  id: number;
+  zip: number;
+  state: string;
 };
 
 export const repositories: Repository[] = [
   {
-    name: "microsoft/typescript",
-    description:
-      "TypeScript is a superset of JavaScript that compiles to clean JavaScript output",
-    language: "TypeScript",
-    followers: 2200,
-    stars: 65000,
-    forks: 8700,
+    name: "John",
+    status:
+    "Inactive",
+    last: "Smith",
+    id: 2200,
+    zip: 10001,
+    state: "CA",
   },
   {
-    name: "nestjs/nest",
-    description:
-      "A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8)",
-    language: "TypeScript",
-    followers: 648,
-    stars: 30900,
-    forks: 2800,
+    name: "Amy",
+    status:
+    "Active",
+    last: "Green",
+    id: 648,
+    zip: 11221,
+    state: "NY",
   },
   {
-    name: "microsoft/vscode",
-    description: "Visual Studio Code",
-    language: "TypeScript",
-    followers: 3000,
-    stars: 105000,
-    forks: 16700,
+    name: "Bob",
+    status:  "Active",
+    last: "Dunn",
+    id: 3000,
+    zip: 20033,
+    state: "AZ",
   },
   {
-    name: "denoland/deno",
-    description: "A secure JavaScript and TypeScript runtime",
-    language: "TypeScript",
-    followers: 1700,
-    stars: 68000,
-    forks: 3500,
+    name: "Joe",
+    status:  "Active",
+    last: "Adams",
+    id: 1700,
+    zip: 85221,
+    state: "NJ",
   },
   {
-    name: "kubernetes/kubernetes",
-    description: "Production-Grade Container Scheduling and Management",
-    language: "Go",
-    followers: 3300,
-    stars: 70700,
-    forks: 25500,
+    name: "Mary",
+    status:  "Active",
+    last: "Smith",
+    id: 3300,
+    zip: 10081,
+    state: "CT",
   },
   {
-    name: "moby/moby",
-    description:
-      "Moby Project - a collaborative project for the container ecosystem to assemble container-based systems",
-    language: "Go",
-    followers: 3200,
-    stars: 58600,
-    forks: 16900,
+    name: "Pat",
+    status:
+    "Inactive",
+    last: "Turner",
+    id: 3200,
+    zip: 30021,
+    state: "ME",
   },
   {
-    name: "gohugoio/hugo",
-    description: "The world’s fastest framework for building websites",
-    language: "Go",
-    followers: 1000,
-    stars: 47200,
-    forks: 5400,
+    name: "Will",
+    status: "Inactive",
+    last: "Mann",
+    id: 1000,
+    zip: 50122,
+    state: "KY",
   },
-  {
-    name: "grafana/grafana",
-    description:
-      "The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More",
-    language: "Go",
-    followers: 1300,
-    stars: 37500,
-    forks: 7600,
-  },
-  {
-    name: "pytorch/pytorch",
-    description:
-      "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-    language: "Python",
-    followers: 1600,
-    stars: 43000,
-    forks: 11200,
-  },
-  {
-    name: "tensorflow/tensorflow",
-    description: "An Open Source Machine Learning Framework for Everyone",
-    language: "Python",
-    followers: 8300,
-    stars: 149000,
-    forks: 82900,
-  },
-  {
-    name: "django/django",
-    description: "The Web framework for perfectionists with deadlines",
-    language: "Python",
-    followers: 2300,
-    stars: 52800,
-    forks: 22800,
-  },
-  {
-    name: "apache/airflow",
-    description:
-      "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
-    language: "Python",
-    followers: 716,
-    stars: 18500,
-    forks: 7200,
-  },
+  
+   
 ];

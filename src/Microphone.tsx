@@ -20,7 +20,7 @@ export const Microphone = React.memo(
       case SpeechState.Idle:
       case SpeechState.Ready:
         enabled = true;
-        text = "Start";
+        text = "Voice";
         break;
       case SpeechState.Recording:
         enabled = true;
@@ -35,7 +35,7 @@ export const Microphone = React.memo(
 
     return (
       <div className="block">
-        <button onClick={onRecord} disabled={!enabled}>
+        <button style={{width: '85px', backgroundColor: '#5A8E22', border: '1px solid #999', color: 'white', padding: '8px'}} onClick={onRecord} disabled={!enabled}>
           {text}
         </button>
         <Transcript segment={segment} />
@@ -48,14 +48,14 @@ const Transcript = React.memo(
   ({ segment }: { segment?: SpeechSegment }): JSX.Element => {
     if (segment === undefined) {
       return (
-        <div>
+        <div style={{fontSize: '11px'}}>
           <em>Waiting for speech input...</em>
         </div>
       );
     }
 
     return (
-      <div>
+      <div style={{fontSize: '11px', color: '#5a8e22'}}>
         {segment.words.map((w) => (
           <Word word={w} key={w.index} />
         ))}

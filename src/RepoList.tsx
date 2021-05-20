@@ -9,20 +9,20 @@ type Props = {
 export const RepoList = ({ repos }: Props): JSX.Element => {
   return (
     <div className="block">
-      <table>
-        <thead>
+      <table style={{width: '100%'}}>
+        <thead style={{textAlign: 'left', color: '#005A8c'}}>
           <tr>
-            <th>Name</th>
-            <th>Language</th>
-            <th>Description</th>
-            <th>Followers</th>
-            <th>Stars</th>
-            <th>Forks</th>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th>Status</th>
+            <th>Card ID</th>
+            <th>Zip</th>
+            <th>State</th>
           </tr>
         </thead>
         <tbody>
           {repos.map((repo) => (
-            <RepoRow repo={repo} key={repo.name} />
+            <RepoRow  repo={repo} key={repo.name} />
           ))}
         </tbody>
       </table>
@@ -33,13 +33,13 @@ export const RepoList = ({ repos }: Props): JSX.Element => {
 const RepoRow = React.memo(
   ({ repo }: { repo: Repository }): JSX.Element => {
     return (
-      <tr>
+      <tr style={{border: '1px solid #f0f0f0', backgroundColor: '#fff'}}>
         <td>{repo.name}</td>
-        <td>{repo.language}</td>
-        <td>{repo.description}</td>
-        <td>{repo.followers}</td>
-        <td>{repo.stars}</td>
-        <td>{repo.forks}</td>
+        <td>{repo.last}</td>
+        <td>{repo.status}</td>
+        <td>{repo.id}</td>
+        <td>{repo.zip}</td>
+        <td>{repo.state}</td>
       </tr>
     );
   }
